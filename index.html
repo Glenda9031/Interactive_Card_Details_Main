@@ -8,33 +8,74 @@
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
 <body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
+  <main>
+    <div class="container">
+      <div class="left__section">
+        <div class="cards">
+          <div class="front__card">
+            <img src="./images/card-logo.svg" alt="card logo" class="card__logo">
+            <div class="card__container">
+              <img src="./images/bg-card-front.png" alt="front card">
+              <h1 id="number">0000 0000 0000 0000</h1>
+              <div class="card__info">
+                <span id="name">Jane Appleseed</span>
+                <span id="date">
+                  <span id="month">00</span>
+                  /
+                  <span id="year">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="bsck__card">
+            <img src="./images/bg-card-back.png" alt="back card">
+            <span id="cvc">000</span>
+          </div>
+        </div>
+      </div>
+      <div class="right__section">
+        <form>
+          <div class="grid__1">
+            <label for="card__name">Cardholder Name</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="card__name" required>
+          </div>
+          <div class="grid__2">
+            <label for="card__number">Card Number</label>
+            <input type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, maxLength);"
+            minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" id="card__number" required>
+          </div>
+          <div class="card__information">
+            <div id="card__date">
+              <label for="card__date">Exp. Date (MM/YY)</label>
+              <div class="two__inp">
+                <div>
+                  <input type="number" placeholder="MM" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, maxLength);"
+                  minlength="2" maxlength="2" id="card__month" required>
+                </div>
+                <div>
+                  <input oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, maxLength);"
+                  minlength="2" maxlength="2" placeholder="YY" id="card__year" required>
+                </div>
+              </div>
+            </div>
+            <div class="grid__4">
+              <label for="card__cvc">CVC</label>
+              <input oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, maxLength);"
+              minlength="3" maxlength="3" placeholder="e.g. 123" id="card__cvc" required>
+            </div>
+          </div>
+          <button type="submit" id="submit__btn">Confirm</button>
+        </form>
+        <div class="thank hidden">
+          <img src="./images/icon-complete.svg" alt="completed">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/imask"></script>  
+  <script src="script.js"></script>
 </body>
 </html>
