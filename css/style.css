@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*,*>*{
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.left__section {
+    min-height: 100vh;
+    width: 40%;
+    background-image: url(../images/bg-main-desktop.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cards {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.front__card {
+    position: relative;
+    transform: translateX(-6.25rem);
+}
+
+.card__logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+#number {
+    position: absolute;
+    color: var(--White);
+    bottom: 5rem;
+    left: 1rem;
+    letter-spacing: .125rem;
+}
+
+.card__info {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: var(--White);
+    justify-content: space-between;
+}
+
+.back__card {
+    position: relative;
+}
+
+.error {
+    border: .125rem solid var(--Red);
+}
+
+.error__message {
+    gap: 0;
+}
+
+.error__message::after {
+    position: absolute;
+    right: 3.5rem;
+    top: 7rem;
+    color: var(--Light-grayish-violet);
+}
+
+#cvc {
+    position: absolute;
+    right: 3.5rem;
+    top: 7rem;
+    color: var(--Light-grayish-violet);
+}
+
+.right__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.right__section form {
+    display: grid;
+    gap: .5rem;
+    width: 21.875rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+label {
+    color: var(--Dark-grayish-violet);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+input {
+    padding: .5rem;
+    font-size: 1.125rem;
+    border: .0625rem solid var(--Dark-grayish-violet);
+    border-radius: .375rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+    font-family: inherit;
+    color: var(--Dark-grayish-violet);
+}
+
+input:focus {
+    outline-color: hsl(249, 99%, 64%);
+}
+
+.grid__1 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+
+.grid__2 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+
+.grid__3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid__4 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+.card__information {
+    display: flex;
+    grid-column: 2 span;
+    gap: 1rem;
+}
+
+#card__date {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+#card__date .two__inp {
+    display: flex;
+}
+
+.two__inp div {
+    flex-direction: column;
+}
+
+#card__date div input {
+    width: 4.375rem;
+    margin-inline: .5rem;
+    margin-left: 0;
+}
+
+#card__cvc {
+    width: 100%;
+}
+
+form button {
+    grid-column: 2 span;
+    font-size: 1.125rem;
+    height: 3.125rem;
+    color: var(--White);
+    border-radius: .375rem;
+    background: var(--Very-dark-violet);
+    cursor: pointer;
+}
+
+.thank {
+    width: 21.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.thank h1 {
+    text-transform: uppercase;
+    letter-spacing: .1875rem;
+}
+
+.thank p {
+    font-size: 1.125rem;
+    color: var(--Dark-grayish-violet);
+}
+
+.thank button {
+    color: var(--White);
+    width: 100%;
+    border-radius: .375rem;
+    padding: 1rem;
+    font-size: 1.125rem;
+    background-color: var(--Very-dark-violet);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
