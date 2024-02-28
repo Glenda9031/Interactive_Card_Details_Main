@@ -79,6 +79,7 @@ body{
 
 .back__card {
     position: relative;
+    z-index: -99;
 }
 
 .error {
